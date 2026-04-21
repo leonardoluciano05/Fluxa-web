@@ -5,21 +5,24 @@
 }
 
 .menu {
+    position: fixed;
     background: linear-gradient(to left, #00b389, #2dcc70);
     height: 100vh;
-    width: 220px;
+    width: 225px;
     display: flex;
     flex-direction: column;
-    text-align: center;   
+    text-align: center;
     gap: 10px;
 }
 
 .logo {
     display: flex;
-    align-items: center; /* alinha vertical */
-    gap: 10px; /* espaço entre imagem e texto */
+    align-items: center;
+    /* alinha vertical */
+    gap: 10px;
+    /* espaço entre imagem e texto */
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
     color: white;
     cursor: default;
     user-select: none;
@@ -30,23 +33,33 @@
     height: 30px;
     background: #00b389;
     padding: 10px;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 15px;
 }
 
-img .tema {
-    border: none;
+.tema {
+    border: none !important;
+    background: none !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.tema:hover {
+    transform: scale(1.2);
+}
+
+.tema:active {
+    transform: scale(0.9);
 }
 
 .menu ul {
-    margin-top: 50px;
+    margin-top: 40px;
     list-style: none;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
-     cursor: default;
+    cursor: default;
     user-select: none;
 }
 
@@ -59,7 +72,6 @@ img .tema {
     display: flex;
     align-items: center;
     gap: 10px;
-
     cursor: pointer;
     transition: 0.3s;
 }
@@ -68,8 +80,14 @@ img .tema {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.menu li:active {
+    transform: scale(0.9);
+}
+
 li .troca {
     filter: brightness(0) invert(1);
+    width: 20px;
+    height: 20px;
 }
 
 aside .menu-footer {
@@ -83,4 +101,86 @@ aside .menu-footer {
     margin-left: 2px;
     cursor: default;
     user-select: none;
+}
+
+.principal {
+    margin-left: 200px;
+    /* espaço do menu */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    text-align: center;
+    background-image: linear-gradient(rgb(226, 242, 233, 0.5), rgb(226, 242, 233, 0.5)), url(../Image/fundo.png);
+    background-size: cover;
+    /* ocupa toda a tela */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* não repete */
+}
+
+#home {
+    flex-direction: column;
+    gap: 10px;
+}
+
+#btComecar {
+    background-color: #008b6a;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btComecar:hover {
+    background: #008b6bb4;
+}
+
+#btComecar:active {
+    transform: scale(0.9);
+}
+
+#home h1 {
+    font-size: 30px;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+.menu li.active {
+    background: #005e48;
+    transform: scale(1.05);
+}
+
+/* esconde tudo */
+.principal>div {
+    display: none;
+}
+
+/* mostra cada tela do jeito certo */
+.home #home {
+    display: flex;
+}
+
+.dashboard #dashboard {
+    display: block;
+}
+
+.transicoes #transicoes {
+    display: block;
+}
+
+.metas #metas {
+    display: block;
+}
+
+.aprender #aprender {
+    display: block;
 }

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluxa</title>
     <link rel="stylesheet" href="../Style/index.css">
+    <script>
+        const telaSalva = localStorage.getItem("telaAtual") || "home";
+        document.documentElement.classList.add(telaSalva);
+    </script>
 </head>
 
 <body>
@@ -15,23 +19,27 @@
         <div class="logo">
             <img src="../Image/F$.png" alt="logo">
             <h2>Fluxa</h2>
-            <img src="../Image/material-symbols_light-mode.png" alt="tema" class="tema">
+            <img class="tema" src="../Image/material-symbols_light-mode.png" alt="tema">
         </div>
 
         <ul>
-            <li>
+            <li onclick="mostrar('home', this)">
+                <img class="troca" src="../Image/casa-icon.png" alt="logo-lista">
+                Início
+            </li>
+            <li onclick="mostrar('dashboard', this)">
                 <img class="troca" src="../Image/ic_round-dashboard.png" alt="logo-lista">
                 Dashboard
             </li>
-            <li>
+            <li onclick="mostrar('transicoes', this)">
                 <img src="../Image/Vector.png" alt="logo-lista">
                 Transições
             </li>
-            <li>
+            <li onclick="mostrar('metas', this)">
                 <img src="../Image/material-symbols_target.png" alt="logo-lista">
                 Metas
             </li>
-            <li>
+            <li onclick="mostrar('aprender', this)">
                 <img src="../Image/icons8_student.png" alt="logo-lista">
                 Aprender
             </li>
@@ -44,11 +52,47 @@
     </aside>
 
     <main class="principal">
+        <div id="home">
+            <h1>Bem-vindo ao Fluxa</h1>
+            <p>Seu controle financeiro de forma simples e inteligente</p>
+            <button id="btComecar">Começar</button>
+        </div>
+
+        <div id="formulario">
+            <h2>Vamos começar</h2>
+
+            <label>Salário:</label>
+            <input type="number" placeholder="Digite seu salário">
+
+            <p>Você possui:</p>
+
+            <label><input type="checkbox"> Contas a pagar</label>
+            <label><input type="checkbox"> Gastos com saúde</label>
+            <label><input type="checkbox"> Lazer</label>
+
+        </div>
+
+        <div id="dashboard">
+            <h1>Dashboard</h1>
+            <p>Aqui vão as informações financeiras</p>
+        </div>
+
+        <div id="transicoes">
+            <h1>Transições</h1>
+        </div>
+
+        <div id="metas" >
+            <h1>Metas</h1>
+        </div>
+
+        <div id="aprender">
+            <h1>Aprender</h1>
+        </div>
 
 
 
     </main>
-
+    <script src="../Script/index.js"></script>
 </body>
 
 </html>
