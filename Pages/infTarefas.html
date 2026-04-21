@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxa</title>
+    <link rel="stylesheet" href="../Style/infTarefa.css">
+</head>
+
+<body>
+
+    <aside class="menu">
+        <div class="logo">
+            <img src="../Image/F$.png" alt="logo">
+            <h2>Fluxa</h2>
+            <img class="tema" src="../Image/material-symbols_light-mode.png" alt="tema">
+        </div>
+
+        <ul>
+            <li onclick="window.location.href='index.html'">
+                <img class="troca" src="../Image/casa-icon.png" alt="logo-lista">
+                Início
+            </li>
+            <li onclick="window.location.href='dashboard.html'">
+                <img class="troca" src="../Image/ic_round-dashboard.png" alt="logo-lista">
+                Dashboard
+            </li>
+            <li onclick="window.location.href='transicoes.html'">
+                <img src="../Image/Vector.png" alt="logo-lista">
+                Transações
+            </li>
+            <li onclick="window.location.href='metas.html'">
+                <img src="../Image/material-symbols_target.png" alt="logo-lista">
+                Metas
+            </li>
+            <li onclick="window.location.href='aprender.html'">
+                <img src="../Image/icons8_student.png" alt="logo-lista">
+                Aprender
+            </li>
+        </ul>
+
+        <div class="menu-bottom">
+            <div class="config-btn active">
+                <img src="../Image/config-icon.png" alt="config">
+                Configurações
+            </div>
+
+            <footer class="menu-footer">
+                <p>© 2026 Fluxa <br> Educação Financeira</p>
+            </footer>
+        </div>
+    </aside>
+
+    <main class="principal">
+        <section class="config-header">
+            <h1>Configurações</h1>
+            <p>Informações do sistema e ambiente de execução</p>
+        </section>
+
+        <h2 class="secao-titulo">Monitoramento em tempo real</h2>
+
+        <section class="cards-config">
+            <div class="card grande">
+                <div class="card-top">
+                    <h3>Uso da CPU</h3>
+                    <span class="valor" id="cpuValor">32%</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-preenchida cpu" id="cpuBarra"></div>
+                </div>
+                <p class="descricao">Uso atual do processador em tempo real</p>
+            </div>
+
+            <div class="card grande">
+                <div class="card-top">
+                    <h3>Memória RAM</h3>
+                    <span class="valor" id="ramValor">5.8 GB / 8 GB</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-preenchida ram" id="ramBarra"></div>
+                </div>
+                <p class="descricao">Consumo atual de memória física</p>
+            </div>
+
+            <div class="card grande">
+                <div class="card-top">
+                    <h3>Disco</h3>
+                    <span class="valor" id="discoValor">220 GB / 512 GB</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-preenchida disco" id="discoBarra"></div>
+                </div>
+                <p class="descricao">Espaço utilizado no armazenamento principal</p>
+            </div>
+
+            <div class="card pequeno">
+                <h3>Processos</h3>
+                <p class="numero" id="procValor">186</p>
+                <p class="descricao">Processos ativos no sistema</p>
+            </div>
+
+            <div class="card pequeno">
+                <h3>Threads</h3>
+                <p class="numero" id="threadsValor">2540</p>
+                <p class="descricao">Threads em execução</p>
+            </div>
+
+            <div class="card pequeno">
+                <h3>Última atualização</h3>
+                <p class="numero menor" id="timestampValor">2026-04-21 18:30:00</p>
+                <p class="descricao">Horário da coleta mais recente</p>
+            </div>
+        </section>
+
+        <h2 class="secao-titulo">Informações do sistema</h2>
+
+        <section class="cards-config">
+            <div class="card">
+                <div class="card-top simples">
+                    <h3>Processador</h3>
+                </div>
+                <div class="card-info">
+                    <div class="linha-info">
+                        <span>Núcleos / Threads lógicos</span>
+                        <span>6 threads</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Plataforma</span>
+                        <span>Win32</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Arquitetura</span>
+                        <span>x86_64 (64-bit)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top simples">
+                    <h3>Memória RAM</h3>
+                </div>
+                <div class="card-info">
+                    <div class="linha-info">
+                        <span>Total</span>
+                        <span>8 GB</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Disponível</span>
+                        <span>2.2 GB</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Uso atual</span>
+                        <span>5.8 GB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top simples">
+                    <h3>Disco & Armazenamento</h3>
+                </div>
+                <div class="card-info">
+                    <div class="linha-info">
+                        <span>API Storage</span>
+                        <span>IndexedDB / Cache disponível</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Total</span>
+                        <span>512 GB</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Usado</span>
+                        <span>220 GB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top simples">
+                    <h3>Tela / Display</h3>
+                </div>
+                <div class="card-info">
+                    <div class="linha-info">
+                        <span>Resolução</span>
+                        <span>1920 x 1080 px</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Profundidade de cor</span>
+                        <span>32 bits</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Pixel Ratio (DPR)</span>
+                        <span>1.0x</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top simples">
+                    <h3>Sistema Operacional</h3>
+                </div>
+                <div class="card-info">
+                    <div class="linha-info">
+                        <span>Sistema Operacional</span>
+                        <span>Windows 10/11</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Navegador</span>
+                        <span>Google Chrome</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Idioma</span>
+                        <span>pt-BR</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Fuso horário</span>
+                        <span>America/Sao_Paulo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top simples">
+                    <h3>Conexão de Rede</h3>
+                </div>
+                <div class="card-info">
+                    <div class="linha-info">
+                        <span>Tipo de conexão</span>
+                        <span>4G</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Velocidade estimada</span>
+                        <span>10 Mbps</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Latência (RTT)</span>
+                        <span>50 ms</span>
+                    </div>
+                    <div class="linha-info">
+                        <span>Online</span>
+                        <span>Sim</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../Script/infTarefa.js"></script>
+</body>
+
+</html>

@@ -15,6 +15,8 @@
     gap: 10px;
 }
 
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -95,12 +97,50 @@ aside .menu-footer {
     color: #005e48;
     border-radius: 15px;
     padding: 10px;
-    margin-top: auto;
     margin-bottom: 5px;
     width: 88%;
     margin-left: 2px;
     cursor: default;
     user-select: none;
+}
+
+.menu-bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    
+}
+
+.menu-bottom img{
+    filter: brightness(0) invert(1);
+    width: 30px;
+    height: 30px;
+}
+
+.config-btn {
+    background-color: #008b6a;
+    color: white;
+    width: 90%;
+    padding: 7px;
+    border-radius: 10px;
+    gap: 5px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.config-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.config-btn:active {
+    transform: scale(0.9);
 }
 
 .principal {
