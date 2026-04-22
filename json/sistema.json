@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-04-21 22:34:46",
+  "cpu_uso": 8.88,
+  "ram_total": 8234328064,
+  "ram_usada": 6955925504,
+  "disco_total": 511402590208,
+  "disco_usado": 144508960768,
+  "processos": 233,
+  "threads": 3034
+}
